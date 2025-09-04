@@ -5,19 +5,25 @@
   "type": "module",
   "main": "index.js",
   "scripts": {
+    "start": "node src/index.js",
     "get-all": "node src/scripts/getAllContacts",
     "generate": "node src/scripts/generateContacts.js",
     "add-one": "node src/scripts/addOneContact.js",
     "count": "node src/scripts/countContacts.js",
     "remove-last": "node src/scripts/removeLastContact.js",
-    "remove-all": "node src/scripts/removeAllContacts.js"
+    "remove-all": "node src/scripts/removeAllContacts.js",
+    "dev": "nodemon src/index.js",
+    "read-contacts": "nodemon src/utils/readContacts.js",
+    "write-contacts": "nodemon src/utils/writeContacts.js"
   },
   "keywords": [],
-  "author": "",
+  "author": "Hennadii Lytvyn <hennadii.lytvyn@gmail.com>",
   "license": "ISC",
   "devDependencies": {
     "@eslint/js": "^9.2.0",
+    "@faker-js/faker": "^10.0.0",
     "eslint": "^9.2.0",
-    "globals": "^15.1.0"
+    "globals": "^15.1.0",
+    "nodemon": "^3.1.10"
   }
 }
