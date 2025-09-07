@@ -3,10 +3,11 @@ import fs from 'node:fs';
 
 export const writeContacts = async (updatedContacts) => {
   try {
-    return fs.promises.writeFile(PATH_DB, updatedContacts);
+    await fs.promises.writeFile(
+      PATH_DB,
+      JSON.stringify(updatedContacts, null, 2),
+    );
   } catch (err) {
     console.error('Rewrite file error occurred: ', err);
   }
 };
-
-// writeContacts("['Hello world', 'tototo']");

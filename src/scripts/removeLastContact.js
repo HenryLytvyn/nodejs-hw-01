@@ -6,7 +6,7 @@ export const removeLastContact = async () => {
 
   if (arrData.length) {
     arrData.pop();
-    writeContacts(JSON.stringify(arrData));
+    writeContacts(arrData);
   }
 };
 
